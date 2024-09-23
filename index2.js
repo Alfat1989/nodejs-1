@@ -50,9 +50,6 @@ const invokeActions = async ({ action, id, data }) => {
     }
 }
 
-// console.log("ARGV", process.argv)
-
-
 // invokeActions({ action: "getAll" })
 // invokeActions({ action: "getById", id: needId })
 // invokeActions({ action: "add", data: newAddProduct })
@@ -60,9 +57,7 @@ const invokeActions = async ({ action, id, data }) => {
 // invokeActions({ action: "remove", id: '83669b4f-16fd-4069-b6d5-ec0a3aa53f7f' })
 
 const arr = hideBin(process.argv)
-// console.log(arr);
 
 const { argv } = yargs(arr)
-// console.log(argv)
 
 invokeActions(argv)
